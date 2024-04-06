@@ -1,0 +1,3 @@
+C:/Users/malu1/CLionProjects/buggewled/cmake-build-debug/_deps/sfml-subbuild/CMakeFiles/sfml-populate.dir
+C:/Users/malu1/CLionProjects/buggewled/cmake-build-debug/_deps/sfml-subbuild/CMakeFiles/edit_cache.dir
+C:/Users/malu1/CLionProjects/buggewled/cmake-build-debug/_deps/sfml-subbuild/CMakeFiles/rebuild_cache.dir
