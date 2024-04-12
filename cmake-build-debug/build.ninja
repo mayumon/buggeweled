@@ -11,7 +11,7 @@
 # =============================================================================
 
 # =============================================================================
-# Project: buggewled
+# Project: buggeweled
 # Configurations: Debug
 # =============================================================================
 
@@ -41,39 +41,39 @@ include CMakeFiles/rules.ninja
 
 cmake_ninja_workdir = C$:/Users/malu1/CLionProjects/buggewled/cmake-build-debug/
 # =============================================================================
-# Object build statements for EXECUTABLE target buggewled
+# Object build statements for EXECUTABLE target buggeweled
 
 
 #############################################
-# Order-only phony target for buggewled
+# Order-only phony target for buggeweled
 
-build cmake_object_order_depends_target_buggewled: phony || cmake_object_order_depends_target_sfml-graphics cmake_object_order_depends_target_sfml-system cmake_object_order_depends_target_sfml-window
+build cmake_object_order_depends_target_buggeweled: phony || cmake_object_order_depends_target_sfml-graphics cmake_object_order_depends_target_sfml-system cmake_object_order_depends_target_sfml-window
 
-build CMakeFiles/buggewled.dir/src/game.cpp.obj: CXX_COMPILER__buggewled_unscanned_Debug C$:/Users/malu1/CLionProjects/buggewled/src/game.cpp || cmake_object_order_depends_target_buggewled
+build CMakeFiles/buggeweled.dir/src/game.cpp.obj: CXX_COMPILER__buggeweled_unscanned_Debug C$:/Users/malu1/CLionProjects/buggewled/src/game.cpp || cmake_object_order_depends_target_buggeweled
   DEFINES = -DSFML_STATIC
-  DEP_FILE = CMakeFiles\buggewled.dir\src\game.cpp.obj.d
+  DEP_FILE = CMakeFiles\buggeweled.dir\src\game.cpp.obj.d
   FLAGS = -g -fdiagnostics-color=always
   INCLUDES = -IC:/Users/malu1/CLionProjects/buggewled/cmake-build-debug/_deps/sfml-src/include
-  OBJECT_DIR = CMakeFiles\buggewled.dir
-  OBJECT_FILE_DIR = CMakeFiles\buggewled.dir\src
+  OBJECT_DIR = CMakeFiles\buggeweled.dir
+  OBJECT_FILE_DIR = CMakeFiles\buggeweled.dir\src
 
 
 # =============================================================================
-# Link build statements for EXECUTABLE target buggewled
+# Link build statements for EXECUTABLE target buggeweled
 
 
 #############################################
-# Link the executable bin\buggewled.exe
+# Link the executable bin\buggeweled.exe
 
-build bin/buggewled.exe: CXX_EXECUTABLE_LINKER__buggewled_Debug CMakeFiles/buggewled.dir/src/game.cpp.obj | _deps/sfml-build/lib/libsfml-graphics-s-d.a _deps/sfml-build/lib/libsfml-window-s-d.a _deps/sfml-build/lib/libsfml-system-s-d.a _deps/sfml-src/extlibs/libs-mingw/x64/libfreetype.a || _deps/sfml-build/lib/libsfml-graphics-s-d.a _deps/sfml-build/lib/libsfml-system-s-d.a _deps/sfml-build/lib/libsfml-window-s-d.a
+build bin/buggeweled.exe: CXX_EXECUTABLE_LINKER__buggeweled_Debug CMakeFiles/buggeweled.dir/src/game.cpp.obj | _deps/sfml-build/lib/libsfml-graphics-s-d.a _deps/sfml-build/lib/libsfml-window-s-d.a _deps/sfml-build/lib/libsfml-system-s-d.a _deps/sfml-src/extlibs/libs-mingw/x64/libfreetype.a || _deps/sfml-build/lib/libsfml-graphics-s-d.a _deps/sfml-build/lib/libsfml-system-s-d.a _deps/sfml-build/lib/libsfml-window-s-d.a
   FLAGS = -g
   LINK_LIBRARIES = _deps/sfml-build/lib/libsfml-graphics-s-d.a  _deps/sfml-build/lib/libsfml-window-s-d.a  _deps/sfml-build/lib/libsfml-system-s-d.a  -lopengl32  -lwinmm  -lgdi32  _deps/sfml-src/extlibs/libs-mingw/x64/libfreetype.a  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
-  OBJECT_DIR = CMakeFiles\buggewled.dir
+  OBJECT_DIR = CMakeFiles\buggeweled.dir
   POST_BUILD = cd .
   PRE_LINK = cmd.exe /C "cd /D C:\Users\malu1\CLionProjects\buggewled\cmake-build-debug && "C:\Program Files\JetBrains\CLion 2023.3.4\bin\cmake\win\x64\bin\cmake.exe" -E copy C:/Users/malu1/CLionProjects/buggewled/cmake-build-debug/_deps/sfml-src/extlibs/bin/x64/openal32.dll C:/Users/malu1/CLionProjects/buggewled/cmake-build-debug/bin && cd C:\Users\malu1\CLionProjects\buggewled\cmake-build-debug"
-  TARGET_FILE = bin\buggewled.exe
-  TARGET_IMPLIB = libbuggewled.dll.a
-  TARGET_PDB = buggewled.exe.dbg
+  TARGET_FILE = bin\buggeweled.exe
+  TARGET_IMPLIB = libbuggeweled.dll.a
+  TARGET_PDB = buggeweled.exe.dbg
 
 
 #############################################
@@ -1901,9 +1901,9 @@ build _deps/sfml-build/src/SFML/Audio/install/strip: phony _deps/sfml-build/src/
 # =============================================================================
 # Target aliases.
 
-build buggewled: phony bin/buggewled.exe
+build buggeweled: phony bin/buggeweled.exe
 
-build buggewled.exe: phony bin/buggewled.exe
+build buggeweled.exe: phony bin/buggeweled.exe
 
 build libsfml-audio-s-d.a: phony _deps/sfml-build/lib/libsfml-audio-s-d.a
 
@@ -1937,7 +1937,7 @@ build sfml-window: phony _deps/sfml-build/lib/libsfml-window-s-d.a
 #############################################
 # Folder: C:/Users/malu1/CLionProjects/buggewled/cmake-build-debug
 
-build all: phony bin/buggewled.exe _deps/sfml-build/all
+build all: phony bin/buggeweled.exe _deps/sfml-build/all
 
 # =============================================================================
 

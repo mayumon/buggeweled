@@ -1,7 +1,4 @@
 "C:\Program Files\JetBrains\CLion 2023.3.4\bin\cmake\win\x64\bin\cmake.exe" -DCMAKE_BUILD_TYPE=Debug "-DCMAKE_MAKE_PROGRAM=C:/Program Files/JetBrains/CLion 2023.3.4/bin/ninja/win/x64/ninja.exe" -G Ninja -S C:\Users\malu1\CLionProjects\buggewled -B C:\Users\malu1\CLionProjects\buggewled\cmake-build-debug
-CMake Error at CMakeLists.txt:17 (set_property):
-  set_property could not find TARGET cmake-build-debug.  Perhaps it has not
-  yet been created.
-
-
--- Configuring incomplete, errors occurred!
+-- Configuring done (2.3s)
+-- Generating done (0.1s)
+-- Build files have been written to: C:/Users/malu1/CLionProjects/buggewled/cmake-build-debug

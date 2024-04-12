@@ -11,6 +11,11 @@ struct bug{
     int x, y; // Window bug coordinates
     int col, row; // Grid bug coordinates
     int type; // Type of bug (integer 0-6)
+    bool is_match;
+
+    bug(){
+        is_match = false;
+    };
 }
 
 bug_grid[9][9]; // Grid of bugs
@@ -62,7 +67,33 @@ int main()
         }
 
         //TODO: bug movement (through mouse input)
-        //TODO: match checking
+
+        //TODO: match checking for matches of 4+ bugs
+
+        // Match checking
+        for(int i = 1; i <= 8; i++) {
+            for (int j = 1; j <= 8; j++) {
+
+                // Vertical match
+                if (bug_grid[i][j].type == bug_grid[i + 1][j].type &&
+                bug_grid[i][j].type == bug_grid[i - 1][j].type) {
+
+                    bug_grid[i - 1][j].is_match = true;
+                    bug_grid[i][j].is_match = true;
+                    bug_grid[i + 1][j].is_match = true;
+                }
+
+                // Horizontal match
+                if (bug_grid[i][j].type == bug_grid[i][j + 1].type &&
+                        bug_grid[i][j].type == bug_grid[i][j - 1].type){
+
+                    bug_grid[i][j - 1].is_match = true;
+                    bug_grid[i][j].is_match = true;
+                    bug_grid[i][j + 1].is_match = true;
+                }
+            }
+        }
+
         //TODO: update bug grid after match
         //TODO: bugs swap back if no match is found
         //TODO: bug animations (moving, matching, falling)

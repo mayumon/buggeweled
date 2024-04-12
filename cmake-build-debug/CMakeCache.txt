@@ -170,7 +170,7 @@ CMAKE_INSTALL_SYSCONFDIR:PATH=etc
 CMAKE_LINKER:FILEPATH=C:/Program Files/JetBrains/CLion 2023.3.4/bin/mingw/bin/ld.exe
 
 //make program
-CMAKE_MAKE_PROGRAM:FILEPATH=C:/PROGRA~1/JETBRA~1/CLION2~1.4/bin/ninja/win/x64/ninja.exe
+CMAKE_MAKE_PROGRAM:FILEPATH=C:/Program Files/JetBrains/CLion 2023.3.4/bin/ninja/win/x64/ninja.exe
 
 //Flags used by the linker during the creation of modules during
 // all build types.
@@ -208,7 +208,7 @@ CMAKE_PROJECT_DESCRIPTION:STATIC=
 CMAKE_PROJECT_HOMEPAGE_URL:STATIC=
 
 //Value Computed by CMake
-CMAKE_PROJECT_NAME:STATIC=buggewled
+CMAKE_PROJECT_NAME:STATIC=buggeweled
 
 //Path to a program.
 CMAKE_RANLIB:FILEPATH=C:/Program Files/JetBrains/CLion 2023.3.4/bin/mingw/bin/ranlib.exe
@@ -439,6 +439,15 @@ VORBIS_LIBRARY:FILEPATH=C:/Users/malu1/CLionProjects/buggewled/cmake-build-debug
 
 //Treat compiler warnings as errors
 WARNINGS_AS_ERRORS:BOOL=OFF
+
+//Value Computed by CMake
+buggeweled_BINARY_DIR:STATIC=C:/Users/malu1/CLionProjects/buggewled/cmake-build-debug
+
+//Value Computed by CMake
+buggeweled_IS_TOP_LEVEL:STATIC=ON
+
+//Value Computed by CMake
+buggeweled_SOURCE_DIR:STATIC=C:/Users/malu1/CLionProjects/buggewled
 
 //Value Computed by CMake
 buggewled_BINARY_DIR:STATIC=C:/Users/malu1/CLionProjects/buggewled/cmake-build-debug

@@ -1,4 +1,4 @@
-C:/Users/malu1/CLionProjects/buggewled/cmake-build-debug/CMakeFiles/buggewled.dir
+C:/Users/malu1/CLionProjects/buggewled/cmake-build-debug/CMakeFiles/buggeweled.dir
 C:/Users/malu1/CLionProjects/buggewled/cmake-build-debug/CMakeFiles/package.dir
 C:/Users/malu1/CLionProjects/buggewled/cmake-build-debug/CMakeFiles/package_source.dir
 C:/Users/malu1/CLionProjects/buggewled/cmake-build-debug/CMakeFiles/edit_cache.dir
