@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.27)
-project(buggewled LANGUAGES CXX)
+project(buggeweled LANGUAGES CXX)
 
 set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/bin)
 option(BUILD_SHARED_LIBS "Build shared libraries" OFF)
@@ -10,16 +10,16 @@ FetchContent_Declare(SFML
         GIT_TAG 2.6.x)
 FetchContent_MakeAvailable(SFML)
 
-add_executable(buggewled src/game.cpp)
-target_link_libraries(buggewled PRIVATE sfml-graphics)
-target_compile_features(buggewled PRIVATE cxx_std_17)
+add_executable(buggeweled src/game.cpp)
+target_link_libraries(buggeweled PRIVATE sfml-graphics)
+target_compile_features(buggeweled PRIVATE cxx_std_17)
 
 if(WIN32)
     add_custom_command(
-            TARGET buggewled
+            TARGET buggeweled
             COMMENT "Copy OpenAL DLL"
-            PRE_BUILD COMMAND ${CMAKE_COMMAND} -E copy ${SFML_SOURCE_DIR}/extlibs/bin/$<IF:$<EQUAL:${CMAKE_SIZEOF_VOID_P},8>,x64,x86>/openal32.dll $<TARGET_FILE_DIR:buggewled>
+            PRE_BUILD COMMAND ${CMAKE_COMMAND} -E copy ${SFML_SOURCE_DIR}/extlibs/bin/$<IF:$<EQUAL:${CMAKE_SIZEOF_VOID_P},8>,x64,x86>/openal32.dll $<TARGET_FILE_DIR:buggeweled>
             VERBATIM)
 endif()
 
-install(TARGETS buggewled)
+install(TARGETS buggeweled)
