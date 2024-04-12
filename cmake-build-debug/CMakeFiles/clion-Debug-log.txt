@@ -1,24 +1,7 @@
 "C:\Program Files\JetBrains\CLion 2023.3.4\bin\cmake\win\x64\bin\cmake.exe" -DCMAKE_BUILD_TYPE=Debug "-DCMAKE_MAKE_PROGRAM=C:/Program Files/JetBrains/CLion 2023.3.4/bin/ninja/win/x64/ninja.exe" -G Ninja -S C:\Users\malu1\CLionProjects\buggewled -B C:\Users\malu1\CLionProjects\buggewled\cmake-build-debug
-CMake Error at C:/Users/malu1/Documents/SFML-2.6.1/lib/cmake/SFML/SFMLSharedTargets.cmake:146 (message):
-  The imported target "sfml-system" references the file
-
-     "/lib/libsfml-system-d.a"
-
-  but this file does not exist.  Possible reasons include:
-
-  * The file was deleted, renamed, or moved to another location.
-
-  * An install or uninstall procedure did not complete successfully.
-
-  * The installation package was faulty and contained
-
-     "C:/Users/malu1/Documents/SFML-2.6.1/lib/cmake/SFML/SFMLSharedTargets.cmake"
-
-  but not all the files it references.
-
-Call Stack (most recent call first):
-  C:/Users/malu1/Documents/SFML-2.6.1/lib/cmake/SFML/SFMLConfig.cmake:116 (include)
-  CMakeLists.txt:7 (find_package)
+CMake Error at CMakeLists.txt:17 (set_property):
+  set_property could not find TARGET cmake-build-debug.  Perhaps it has not
+  yet been created.
 
 
 -- Configuring incomplete, errors occurred!

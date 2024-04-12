@@ -1,25 +1,90 @@
 #include <SFML/Graphics.hpp>
+#include <random>
+#include <iostream>
 
-int main() {
-    // Create a window
-    sf::RenderWindow window(sf::VideoMode(800, 600), "buggewled!");
+using namespace sf;
 
-    // Main loop
-    while (window.isOpen()) {
-        // Process events
-        sf::Event event;
-        while (window.pollEvent(event)) {
-            if (event.type == sf::Event::Closed) {
-                window.close();
-            }
+int tile = 32;
+Vector2i offset(96,32);
+
+struct bug{
+    int x, y; // Window bug coordinates
+    int col, row; // Grid bug coordinates
+    int type; // Type of bug (integer 0-6)
+}
+
+bug_grid[9][9]; // Grid of bugs
+
+int main()
+{
+    // Open game window
+    RenderWindow app(VideoMode(384,320), "buggeweled");
+    app.setFramerateLimit(60);
+
+    // Open texture files
+    Texture t_bugs,t_board;
+
+    t_board.loadFromFile("images/board.png");
+    t_bugs.loadFromFile("images/bugs.png");
+
+    Sprite board(t_board);
+    Sprite bugs(t_bugs);
+
+    // Initialize the grid with random bugs
+    std::random_device rd;
+    std::mt19937 gen(rd()); //
+    std::uniform_int_distribution<> dis(1, 100);
+
+    for (int i = 1; i <= 8; i++) {
+        for (int j = 1; j <= 8; j++) {
+
+            bug_grid[i][j].x = j * tile;
+            bug_grid[i][j].y = i * tile;
+
+            bug_grid[i][j].row = i;
+            bug_grid[i][j].col = j;
+
+            int random_number = dis(gen);
+            bug_grid[i][j].type = random_number % 7;
         }
-
-        // Clear window
-        window.clear();
-
-        // Display window contents
-        window.display();
     }
 
+    // Game loop
+    while (app.isOpen())
+    {
+        Event e{};
+
+        while (app.pollEvent(e))
+        {
+            // Close window
+            if (e.type == Event::Closed)
+                app.close();
+        }
+
+        //TODO: bug movement (through mouse input)
+        //TODO: match checking
+        //TODO: update bug grid after match
+        //TODO: bugs swap back if no match is found
+        //TODO: bug animations (moving, matching, falling)
+        //TODO: calculate and display score
+
+        // Draw board and bugs
+        app.draw(board);
+
+        for (int i = 1; i <= 8; i++) {
+            for (int j = 1; j <= 8; j++) {
+
+                bug curr_bug = bug_grid[i][j];
+
+                // Set bug sprite texture
+                bugs.setTextureRect(IntRect(32 * curr_bug.type, 0, 32, 32));
+                bugs.setPosition(curr_bug.x, curr_bug.y);
+                bugs.move(offset.x - tile, offset.y - tile);
+
+                app.draw(bugs);
+            }
+        }
+        app.display();
+    }
     return 0;
 }
