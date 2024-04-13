@@ -68,28 +68,31 @@ int main()
 
         //TODO: bug movement (through mouse input)
 
-        //TODO: match checking for matches of 4+ bugs
-
         // Match checking
         for(int i = 1; i <= 8; i++) {
             for (int j = 1; j <= 8; j++) {
 
                 // Vertical match
-                if (bug_grid[i][j].type == bug_grid[i + 1][j].type &&
-                bug_grid[i][j].type == bug_grid[i - 1][j].type) {
-
-                    bug_grid[i - 1][j].is_match = true;
-                    bug_grid[i][j].is_match = true;
-                    bug_grid[i + 1][j].is_match = true;
+                int vertical_count = 1;
+                for (int k = i + 1; k <= 8 && bug_grid[i][j].type == bug_grid[k][j].type; k++) {
+                    vertical_count++;
+                }
+                if (vertical_count >= 4) {
+                    for (int k = 0; k < vertical_count; k++) {
+                        bug_grid[i + k][j].is_match = true;
+                    }
                 }
 
                 // Horizontal match
-                if (bug_grid[i][j].type == bug_grid[i][j + 1].type &&
-                        bug_grid[i][j].type == bug_grid[i][j - 1].type){
+                int horizontal_count = 1;
+                for (int k = j + 1; k <= 8 && bug_grid[i][j].type == bug_grid[i][k].type; k++) {
+                    horizontal_count++;
+                }
 
-                    bug_grid[i][j - 1].is_match = true;
-                    bug_grid[i][j].is_match = true;
-                    bug_grid[i][j + 1].is_match = true;
+                if (horizontal_count >= 4) {
+                    for (int k = 0; k < horizontal_count; k++) {
+                        bug_grid[i][j + k].is_match = true;
+                    }
                 }
             }
         }
